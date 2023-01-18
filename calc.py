@@ -1,8 +1,12 @@
+#!/usr/bin/python
+# encoding: utf-8
+
 # Importer les modules requis
 from tkinter import *
 import tkinter.font as font
-import \
-    json  # Un fichier JSON est un fichier qui stocke des structures de données simples et des objets,Il est principalement utilisé pour transmettre des données entre un serveur et une application Web, comme alternative à XML
+import json  # Un fichier JSON est un fichier qui stocke des structures de données simples et des objets,
+# Il est principalement utilisé pour transmettre des données entre un serveur et une application Web,
+# comme alternative à XML
 
 #  ╔═══════════════════════════════════════╗
 #  ║          Calculatrice Python          ║
@@ -13,9 +17,11 @@ import \
 # Tous les commentaires seront en français et les noms de variables seront en anglais
 
 
+
 # Création de la fenêtre principale
 Interface = Tk()
 Interface.configure(background="#708090")
+
 # Liste pour stocker l'historique des calculs
 history = []
 # Variable permettant de stocker le chemin d'accès au fichier d'historique
@@ -32,7 +38,7 @@ myFont = font.Font(size=15, slant="italic")
 # Création d'un widget Entry pour obtenir l'expression mathématique,
 # Et aussi pour afficher les résultats
 screen = Entry(Interface, text=inp, width=30,
-               justify='right', font=(29), bd=4, background="white")
+               justify='right', font=29, bd=4, background="white")
 
 # Nous  utilisons une structure de type grille
 screen.grid(row=0, columnspan=4, padx=15,
@@ -125,7 +131,8 @@ def display_history():
 
     index = 0
     while index < len(
-            history):  # La boucle while parcours chaque élément de l'historique et les insère dans la liste widget à chaque itération.
+            history):  # La boucle while parcours chaque élément de l'historique et les insère dans la liste widget à
+        # chaque itération.
         history_list.insert(index, history[index])
         index += 1
 
@@ -169,4 +176,3 @@ while i < len(key_matrix):
     j = 0
 
 Interface.mainloop()
-
